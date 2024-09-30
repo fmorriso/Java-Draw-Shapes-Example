@@ -19,12 +19,12 @@ public class TopPanel extends JPanel {
         Graphics2D g2 = (Graphics2D) g;
 
         double x1, y1, x2, y2, w, h;
-        x1 = scaledSize.width * 0.05;
-        x2 = scaledSize.width * 0.95;
+        x1 = scaledSize.width * 0.15;
+        x2 = scaledSize.width * 0.85;
         y1 = scaledSize.height * 0.05;
         y2 = scaledSize.height * 0.95;
 
-        Shape line = new Line2D.Double(3, 3, 303, 303);
+        Shape line = new Line2D.Double(x1, y1, x2, y2);
         Shape rect = new Rectangle(3, 3, 303, 303);
         Shape circle = new Ellipse2D.Double(100, 100, 100, 100);
 

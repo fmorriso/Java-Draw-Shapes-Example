@@ -5,8 +5,9 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.format("Java version: %s%n", getJavaVersion());
+        String title = String.format("Draw Shapes Example using java version %s", getJavaVersion());
         Dimension scaledSize = SwingScreenUtilities.getScaledSize(.55, 100);
-        GUI gui = new GUI(scaledSize);
+        GUI gui = new GUI(scaledSize, title);
         SwingUtilities.invokeLater(gui);
     }
 

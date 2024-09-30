@@ -16,15 +16,15 @@ public class DrawShapesFrame extends JFrame {
      * @see Component#setVisible
      * @see JComponent#getDefaultLocale
      */
-    public DrawShapesFrame(Dimension scaledSize) throws HeadlessException {
+    public DrawShapesFrame(Dimension scaledSize, String title) throws HeadlessException {
 
         setSize(scaledSize);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         TopPanel tp = new TopPanel(scaledSize);
-        setTitle("My Shapes");
+        setTitle(title);
         this.getContentPane().add(tp);
-
+        setLocationRelativeTo(null); // center
         setVisible(true);
     }
 
