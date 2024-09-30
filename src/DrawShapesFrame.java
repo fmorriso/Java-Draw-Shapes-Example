@@ -16,12 +16,12 @@ public class DrawShapesFrame extends JFrame {
      * @see Component#setVisible
      * @see JComponent#getDefaultLocale
      */
-    public DrawShapesFrame() throws HeadlessException {
+    public DrawShapesFrame(Dimension scaledSize) throws HeadlessException {
 
-        setSize(new Dimension(320, 320));
+        setSize(scaledSize);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        TopPanel tp = new TopPanel();
+        TopPanel tp = new TopPanel(scaledSize);
         setTitle("My Shapes");
         this.getContentPane().add(tp);
 

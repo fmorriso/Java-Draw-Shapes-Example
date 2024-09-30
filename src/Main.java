@@ -1,12 +1,13 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class Main {
 
     public static void main(String[] args) {
         System.out.format("Java version: %s%n", getJavaVersion());
-
-        GUI gui = new GUI();
-        SwingUtilities.invokeLater(()-> gui.run());
+        Dimension scaledSize = SwingScreenUtilities.getScaledSize(.55, 100);
+        GUI gui = new GUI(scaledSize);
+        SwingUtilities.invokeLater(gui);
     }
 
 
